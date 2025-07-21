@@ -1,0 +1,16 @@
+{% load leaflet_tags %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% leaflet_js %}
+  {% leaflet_css %}
+  <title>Interactive maps for Django web apps</title>
+</head>
+
+<body>
+  <h1>Weather or Not?!</h1>
+  {% leaflet_map "yourmap" %}
+</body>
+
+</html>
