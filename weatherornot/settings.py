@@ -82,6 +82,16 @@ DATABASES = {
     }
 }
 
+LEAFLET_CONFIG = {
+    'SPATIAL_EXTENT': (-122.543281, 37.69699, -122.307766, 37.848256),
+    'DEFAULT_CENTER': (37.7749, -122.4194),
+    'DEFAULT_ZOOM': 13,
+    'MIN_ZOOM': 3,
+    'MAX_ZOOM': 18,
+    'DEFAULT_PRECISION': 6,
+}
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
