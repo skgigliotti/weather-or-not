@@ -17,4 +17,5 @@ def get_stats(request, **kwargs):
     return JsonResponse(data={
         'temperature': str(location.temperature),
         'wind': str(location.wind_speed),
-        'uv': str(location.uv_index)})
+        'uv': str(location.uv_index),
+        'fog': str(location.cloud_cover)})

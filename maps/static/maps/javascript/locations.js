@@ -38,8 +38,9 @@
             // Add marker to map at click location; add popup window
             get_stats(e.latlng).then(function (stats) {
                 var marker = new L.marker(e.latlng).addTo(map);
-                console.log(stats)
-                marker.bindPopup(stats.temperature).openPopup();
+                var statsString = `🌡️ ${stats.temperature}°F\r🌁 ${stats.fog}%\r🍃 ${stats.wind}mph\r☀️ ${stats.uv}`
+                var htmlStats = statsString.replace(/(\r\n|\n|\r)/gm, "<br>");
+                marker.bindPopup(htmlStats).openPopup();
             })
         }
     });
