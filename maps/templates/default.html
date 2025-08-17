@@ -1,5 +1,7 @@
+{% load static %}
 {% load leaflet_tags %}
 <!DOCTYPE html>
+
 <style>
   .leaflet-container {
     /* all maps */
@@ -12,7 +14,10 @@
     width: 100%;
   }
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="{% static 'maps/javascript/locations.js' %}"></script>
 <html>
+<!-- <link rel="icon" href="/maps/static/maps/images/favicon.png" type="image/png"> -->
 
 <head>
   {% leaflet_js %}

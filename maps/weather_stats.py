@@ -59,3 +59,6 @@ class Location:
         self.uv_index = hourly.Variables(5).ValuesAsNumpy()[0]
         self.wind_speed = hourly.Variables(6).ValuesAsNumpy()[0]
         self.wind_gusts = hourly.Variables(7).ValuesAsNumpy()[0]
+    
+    class Media:
+        js = ('maps/locations.js',)
