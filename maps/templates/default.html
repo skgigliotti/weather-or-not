@@ -3,6 +3,13 @@
 <!DOCTYPE html>
 
 <style>
+  h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: xx-large;
+    color: rgb(244, 161, 78);
+  }
+
   .leaflet-container {
     /* all maps */
     width: 100%;
@@ -26,8 +33,8 @@
 </head>
 
 <body>
-  <h1>Weather or Not?!</h1>
-  {% leaflet_map "yourmap" %}
+  <h1>Weather or Not in The City</h1>
+  {% leaflet_map "citymap" %}
 </body>
 
 </html>
