@@ -7,7 +7,7 @@ from maps.weather_stats import Location
 
 
 def default_map(request):
-    return render(request, 'default.html', {})
+    return render(request, 'index.html', {})
 
 def get_stats(request, **kwargs):
     lat = request.GET.get('lat')
