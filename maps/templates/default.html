@@ -1,0 +1,40 @@
+{% load static %}
+{% load leaflet_tags %}
+<!DOCTYPE html>
+
+<style>
+  h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: xx-large;
+    color: rgb(244, 161, 78);
+  }
+
+  .leaflet-container {
+    /* all maps */
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Resize the "display_raw" textbox */
+  .django-leaflet-raw-textarea {
+    width: 100%;
+  }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="{% static 'maps/javascript/locations.js' %}"></script>
+<html>
+<!-- <link rel="icon" href="/maps/static/maps/images/favicon.png" type="image/png"> -->
+
+<head>
+  {% leaflet_js %}
+  {% leaflet_css %}
+  <title>Interactive maps for Django web apps</title>
+</head>
+
+<body>
+  <h1>Weather or Not in The City</h1>
+  {% leaflet_map "citymap" %}
+</body>
+
+</html>
