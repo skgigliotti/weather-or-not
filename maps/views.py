@@ -15,7 +15,7 @@ def get_stats(request, **kwargs):
     location = Location(lat=lat, lng=lng)
     location.get_hourly_stats()
     return JsonResponse(data={
-        'temperature': str(location.temperature),
-        'wind': str(location.wind_speed),
-        'uv': str(location.uv_index),
-        'fog': str(location.cloud_cover)})
+        'temperature': str(round(location.temperature)),
+        'wind': str(round(location.wind_speed)),
+        'uv': str(round(location.uv_index, 2)),
+        'fog': str(round(location.cloud_cover))})
